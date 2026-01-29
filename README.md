@@ -9,7 +9,7 @@
       <img src="https://img.shields.io/github/stars/SwiftTube/SwiftTube" />
   </a>
     
-  <a href="https://github.com/nexmoe/VidBee/graphs/contributors">
+  <a href="https://github.com/SwiftTube/SwiftTube/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/SwiftTube/SwiftTube?ogo=github&label=Contributors&labelColor=black&orange" />
   </a>
   
