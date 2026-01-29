@@ -1,0 +1,45 @@
+{
+  "de-DE": {
+    "explore_empty_title": "Beginne mit dem Herunterladen\nvon Videos auf der Entdecken-Seite",
+    "explore_empty_subtitle": "Deine Downloads in der Warteschlange\nwerden hier angezeigt",
+
+    "search_empty_title": "Ups, kein Ergebnis\ngefunden",
+    "search_empty_subtitle": "Versuche eine andere Suche,\nändere Filter oder probiere etwas anderes",
+    "search_hint": "Nutze die Suchleiste oben,\nfiltere mit \"Tags\" für\ngenauere Ergebnisse",
+
+    "general_settings": "Allgemeine Einstellungen",
+    "change_language_desc": "Sprache der Anwendung ändern",
+    "language": "Sprache",
+
+    "appearance_settings": "Darstellungseinstellungen",
+    "dark_theme": "Dunkles Design",
+    "dark_theme_desc": "Das App-Design auf dunkel umstellen",
+
+    "download_settings": "Download-Einstellungen",
+    "download_path": "Download-Pfad",
+    "download_path_desc": "Wähle den Speicherort für heruntergeladene Videos",
+
+    "search_settings": "Sucheinstellungen (Leistung)",
+    "search_limit": "Suchlimit",
+    "search_limit_desc": "Begrenze die Anzahl der angezeigten Widgets",
+
+    "load_thumbnail": "Video-Vorschaubild laden",
+    "load_thumbnail_desc": "Laden von Vorschaubildern aktivieren",
+
+    "search_panel": "Suchbereich",
+    "download_queue": "Download-Warteschlange",
+    "repository": "SwiftTube-Repository",
+    "settings": "Einstellungen",
+
+    "search_placeholder": "Suche ein YouTube-Video oder füge einen Link ein...",
+
+    "watch_video": "Video ansehen",
+    "add_to_downloads": "Zu Downloads hinzufügen",
+    "file_size": "Dateigröße",
+
+    "error_cant_download": "Dieses Video kann nicht heruntergeladen werden.",
+    "success_download": "Video erfolgreich heruntergeladen.",
+    "copied_link": "Link in die Zwischenablage kopiert.",
+    "added_to_queue": "Video zur Warteschlange hinzugefügt."
+  }
+}

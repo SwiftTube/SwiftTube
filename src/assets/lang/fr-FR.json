@@ -1,0 +1,45 @@
+{
+  "fr-FR": {
+    "explore_empty_title": "Commencez à télécharger\ndes vidéos depuis la page Explorer",
+    "explore_empty_subtitle": "Vos téléchargements en attente\napparaîtront ici pour être gérés",
+
+    "search_empty_title": "Oups, aucun résultat\nn'a été trouvé",
+    "search_empty_subtitle": "Essayez une autre recherche,\nmodifiez les filtres ou testez autre chose",
+    "search_hint": "Utilisez la barre de recherche ci-dessus,\nvous pouvez filtrer avec des \"tags\"\npour des résultats plus précis",
+
+    "general_settings": "Paramètres généraux",
+    "change_language_desc": "Changer la langue actuelle de l'application",
+    "language": "Langue",
+
+    "appearance_settings": "Paramètres d'apparence",
+    "dark_theme": "Thème sombre",
+    "dark_theme_desc": "Passer le thème de l'application en sombre",
+
+    "download_settings": "Paramètres de téléchargement",
+    "download_path": "Chemin de téléchargement",
+    "download_path_desc": "Sélectionnez le chemin de téléchargement des vidéos",
+
+    "search_settings": "Paramètres de recherche (Performance)",
+    "search_limit": "Limite de recherche",
+    "search_limit_desc": "Définir le nombre maximum de widgets affichés",
+
+    "load_thumbnail": "Charger les miniatures vidéo",
+    "load_thumbnail_desc": "Activer le chargement des miniatures vidéo",
+
+    "search_panel": "Panneau de recherche",
+    "download_queue": "File de téléchargement",
+    "repository": "Dépôt SwiftTube",
+    "settings": "Paramètres",
+
+    "search_placeholder": "Recherchez une vidéo YouTube ou entrez un lien...",
+
+    "watch_video": "Regarder la vidéo",
+    "add_to_downloads": "Ajouter aux téléchargements",
+    "file_size": "Taille du fichier",
+
+    "error_cant_download": "Impossible de télécharger cette vidéo.",
+    "success_download": "Vidéo téléchargée avec succès.",
+    "copied_link": "Lien copié dans le presse-papiers.",
+    "added_to_queue": "Vidéo ajoutée à la file d'attente."
+  }
+}

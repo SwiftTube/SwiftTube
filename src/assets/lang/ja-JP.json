@@ -1,0 +1,45 @@
+{
+  "ja-JP": {
+    "explore_empty_title": "探索ページから\n動画のダウンロードを開始しましょう",
+    "explore_empty_subtitle": "キュー内のダウンロードは\nここに表示されます",
+
+    "search_empty_title": "結果が\n見つかりませんでした",
+    "search_empty_subtitle": "別の検索を試すか、\nフィルターを変更してください",
+    "search_hint": "上の検索バーを使用し、\n「タグ」で絞り込むと\nより正確な結果が得られます",
+
+    "general_settings": "一般設定",
+    "change_language_desc": "アプリの言語を変更",
+    "language": "言語",
+
+    "appearance_settings": "外観設定",
+    "dark_theme": "ダークテーマ",
+    "dark_theme_desc": "アプリをダークテーマに切り替える",
+
+    "download_settings": "ダウンロード設定",
+    "download_path": "ダウンロード先",
+    "download_path_desc": "動画の保存先を選択",
+
+    "search_settings": "検索設定（パフォーマンス）",
+    "search_limit": "検索制限",
+    "search_limit_desc": "表示するウィジェット数を制限",
+
+    "load_thumbnail": "サムネイルを読み込む",
+    "load_thumbnail_desc": "動画のサムネイルを有効化",
+
+    "search_panel": "検索パネル",
+    "download_queue": "ダウンロードキュー",
+    "repository": "SwiftTube リポジトリ",
+    "settings": "設定",
+
+    "search_placeholder": "YouTube動画を検索するか、リンクを入力してください...",
+
+    "watch_video": "動画を見る",
+    "add_to_downloads": "ダウンロードに追加",
+    "file_size": "ファイルサイズ",
+
+    "error_cant_download": "この動画をダウンロードできません。",
+    "success_download": "動画のダウンロードが完了しました。",
+    "copied_link": "リンクをクリップボードにコピーしました。",
+    "added_to_queue": "動画をキューに追加しました。"
+  }
+}

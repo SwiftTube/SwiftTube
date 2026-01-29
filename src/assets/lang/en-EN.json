@@ -1,0 +1,45 @@
+{
+    "en-EN": {
+        "explore_empty_title": "Start downloading\nvideos on explore page!",
+        "explore_empty_subtitle": "Your downloads in queue will appear\nhere, so you can manage them!",
+
+        "search_empty_title": "Oops, we couldn't find\na result for you!",
+        "search_empty_subtitle": "Try doing another search, changing\nfilters or trying something different!",
+        "search_hint": "Use the search bar above, you can\nfilter the search with \"tags\" for more\nexact results.",
+
+        "general_settings": "General Settings",
+        "change_language_desc": "Change the app current language",
+        "language": "Language",
+
+        "appearance_settings": "Appearance Settings",
+        "dark_theme": "Dark theme",
+        "dark_theme_desc": "Change the app theme to Dark",
+
+        "download_settings": "Download settings",
+        "download_path": "Download path",
+        "download_path_desc": "Select the path for the downloaded videos",
+
+        "search_settings": "Search settings (Performance)",
+        "search_limit": "Search limit",
+        "search_limit_desc": "Set the limit of widgets when searching videos",
+
+        "load_thumbnail": "Load video thumbnail",
+        "load_thumbnail_desc": "Enable loading thumbnails for videos",
+        
+        "search_panel": "Search panel",
+        "download_queue": "Download queue",
+        "repository": "SwiftTube repository",
+        "settings": "Settings",
+
+        "search_placeholder": "Search a YouTube video or input a link...",
+
+        "watch_video": "Watch video",
+        "add_to_downloads": "Add to downloads",
+        "file_size": "File size",
+
+        "error_cant_download": "Can't download this video.",
+        "success_download": "Video downloaded successfully.",
+        "copied_link": "Copied link to clipboard.",
+        "added_to_queue": "Added video to queue."
+    }
+}

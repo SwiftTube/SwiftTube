@@ -1,0 +1,45 @@
+{
+  "ko-KR": {
+    "explore_empty_title": "탐색 페이지에서\n동영상 다운로드를 시작하세요",
+    "explore_empty_subtitle": "대기 중인 다운로드가\n여기에 표시됩니다",
+
+    "search_empty_title": "결과를\n찾을 수 없습니다",
+    "search_empty_subtitle": "다른 검색어를 시도하거나\n필터를 변경해 보세요",
+    "search_hint": "상단 검색창을 사용하여\n\"태그\"로 필터링하면\n더 정확한 결과를 얻을 수 있습니다",
+
+    "general_settings": "일반 설정",
+    "change_language_desc": "앱의 현재 언어 변경",
+    "language": "언어",
+
+    "appearance_settings": "모양 설정",
+    "dark_theme": "다크 테마",
+    "dark_theme_desc": "앱 테마를 다크 모드로 변경",
+
+    "download_settings": "다운로드 설정",
+    "download_path": "다운로드 경로",
+    "download_path_desc": "동영상이 저장될 경로 선택",
+
+    "search_settings": "검색 설정 (성능)",
+    "search_limit": "검색 제한",
+    "search_limit_desc": "검색 시 표시되는 위젯 수 제한",
+
+    "load_thumbnail": "동영상 썸네일 로드",
+    "load_thumbnail_desc": "동영상 썸네일 로딩 활성화",
+
+    "search_panel": "검색 패널",
+    "download_queue": "다운로드 대기열",
+    "repository": "SwiftTube 저장소",
+    "settings": "설정",
+
+    "search_placeholder": "YouTube 동영상을 검색하거나 링크를 입력하세요...",
+
+    "watch_video": "동영상 보기",
+    "add_to_downloads": "다운로드에 추가",
+    "file_size": "파일 크기",
+
+    "error_cant_download": "이 동영상을 다운로드할 수 없습니다.",
+    "success_download": "동영상이 성공적으로 다운로드되었습니다.",
+    "copied_link": "링크가 클립보드에 복사되었습니다.",
+    "added_to_queue": "동영상이 대기열에 추가되었습니다."
+  }
+}

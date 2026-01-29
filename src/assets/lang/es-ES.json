@@ -1,0 +1,45 @@
+{
+    "es-ES": {
+        "explore_empty_title": "¡Empieza a descargar\nvideos desde la página Explorar!",
+        "explore_empty_subtitle": "Tus descargas en cola aparecerán\naquí para que puedas gestionarlas",
+
+        "search_empty_title": "Ups, no encontramos\nningún resultado",
+        "search_empty_subtitle": "Probá otra búsqueda, cambiá\nlos filtros o intentá algo distinto",
+        "search_hint": "Usá la barra de búsqueda superior,\npodés filtrar con \"tags\" para obtener\nresultados más precisos",
+
+        "general_settings": "Configuración general",
+        "change_language_desc": "Cambiar el idioma actual de la aplicación",
+        "language": "Idioma",
+
+        "appearance_settings": "Configuración de apariencia",
+        "dark_theme": "Tema oscuro",
+        "dark_theme_desc": "Cambiar el tema de la aplicación a oscuro",
+
+        "download_settings": "Configuración de descargas",
+        "download_path": "Ruta de descarga",
+        "download_path_desc": "Seleccioná la ruta donde se descargarán los videos",
+
+        "search_settings": "Configuración de búsqueda (Rendimiento)",
+        "search_limit": "Límite de búsqueda",
+        "search_limit_desc": "Establecer el límite de widgets al buscar videos",
+
+        "load_thumbnail": "Cargar miniatura de video",
+        "load_thumbnail_desc": "Habilitar la carga de miniaturas de los videos",
+
+        "search_panel": "Panel de búsqueda",
+        "download_queue": "Cola de descargas",
+        "repository": "Repositorio de SwiftTube",
+        "settings": "Configuración",
+
+        "search_placeholder": "Busca un video de YouTube o ingresa un enlace...",
+
+        "watch_video": "Ver video",
+        "add_to_downloads": "Agregar a descargas",
+        "file_size": "Tamaño del archivo",
+
+        "error_cant_download": "No se puede descargar este video.",
+        "success_download": "Video descargado correctamente.",
+        "copied_link": "Enlace copiado al portapapeles.",
+        "added_to_queue": "Video agregado a la cola."
+    }
+}

@@ -1,0 +1,45 @@
+{
+  "zh-CN": {
+    "explore_empty_title": "开始在探索页面\n下载视频吧",
+    "explore_empty_subtitle": "队列中的下载内容\n将显示在这里供你管理",
+
+    "search_empty_title": "哎呀，没有找到\n相关结果",
+    "search_empty_subtitle": "请尝试其他搜索条件，\n调整筛选器或更换关键词",
+    "search_hint": "使用上方搜索栏，\n可通过“标签”筛选\n获得更精确的结果",
+
+    "general_settings": "常规设置",
+    "change_language_desc": "更改应用当前语言",
+    "language": "语言",
+
+    "appearance_settings": "外观设置",
+    "dark_theme": "深色主题",
+    "dark_theme_desc": "将应用主题切换为深色",
+
+    "download_settings": "下载设置",
+    "download_path": "下载路径",
+    "download_path_desc": "选择视频的下载保存路径",
+
+    "search_settings": "搜索设置（性能）",
+    "search_limit": "搜索限制",
+    "search_limit_desc": "设置搜索时显示的小组件数量",
+
+    "load_thumbnail": "加载视频缩略图",
+    "load_thumbnail_desc": "启用视频缩略图加载",
+
+    "search_panel": "搜索面板",
+    "download_queue": "下载队列",
+    "repository": "SwiftTube 仓库",
+    "settings": "设置",
+
+    "search_placeholder": "搜索 YouTube 视频或输入链接...",
+
+    "watch_video": "观看视频",
+    "add_to_downloads": "添加到下载",
+    "file_size": "文件大小",
+
+    "error_cant_download": "无法下载该视频。",
+    "success_download": "视频下载成功。",
+    "copied_link": "链接已复制到剪贴板。",
+    "added_to_queue": "视频已加入队列。"
+  }
+}

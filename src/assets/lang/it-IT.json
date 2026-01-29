@@ -1,0 +1,45 @@
+{
+  "it-IT": {
+    "explore_empty_title": "Inizia a scaricare\nvideo dalla pagina Esplora",
+    "explore_empty_subtitle": "I download in coda appariranno\nqui per essere gestiti",
+
+    "search_empty_title": "Ops, nessun risultato\ntrovato",
+    "search_empty_subtitle": "Prova un'altra ricerca,\ncambia i filtri o tenta qualcosa di diverso",
+    "search_hint": "Usa la barra di ricerca in alto,\npuoi filtrare con i \"tag\" per\nrisultati più precisi",
+
+    "general_settings": "Impostazioni generali",
+    "change_language_desc": "Cambia la lingua dell'applicazione",
+    "language": "Lingua",
+
+    "appearance_settings": "Impostazioni di aspetto",
+    "dark_theme": "Tema scuro",
+    "dark_theme_desc": "Imposta il tema dell'app su scuro",
+
+    "download_settings": "Impostazioni di download",
+    "download_path": "Percorso di download",
+    "download_path_desc": "Seleziona il percorso dei video scaricati",
+
+    "search_settings": "Impostazioni di ricerca (Prestazioni)",
+    "search_limit": "Limite di ricerca",
+    "search_limit_desc": "Imposta il limite di widget visualizzati",
+
+    "load_thumbnail": "Carica miniatura video",
+    "load_thumbnail_desc": "Abilita il caricamento delle miniature",
+
+    "search_panel": "Pannello di ricerca",
+    "download_queue": "Coda di download",
+    "repository": "Repository di SwiftTube",
+    "settings": "Impostazioni",
+
+    "search_placeholder": "Cerca un video YouTube o inserisci un link...",
+
+    "watch_video": "Guarda video",
+    "add_to_downloads": "Aggiungi ai download",
+    "file_size": "Dimensione file",
+
+    "error_cant_download": "Impossibile scaricare questo video.",
+    "success_download": "Video scaricato con successo.",
+    "copied_link": "Link copiato negli appunti.",
+    "added_to_queue": "Video aggiunto alla coda."
+  }
+}
