@@ -1,7 +1,7 @@
 import requests
 
 __author__ = "TrollSkull"
-__version__ = "1.0.0"
+__version__ = "0.1.0"
 __license__ = "MIT License"
 
 LATEST_RELEASE = "https://api.github.com/repos/TrollSkull/SwiftTube/releases/latest"
