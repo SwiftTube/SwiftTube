@@ -22,7 +22,11 @@
   <img src=".github/assets/screenshot.webp" alt="SwiftTube screenshot">
 </p>
 
-SwiftTube is a lightweight and fast desktop application that lets you easily download YouTube videos. With a minimal interface, you can input links, or search videos. Also you can download those videos in MP3 and MP4 formats, and enjoy a smooth experience.
+SwiftTube is a lightweight and fast desktop application designed to download YouTube videos in MP3 and MP4 formats. It provides a clean and minimal interface that is easy to understand and use.
+
+The application allows you to download videos quickly and keep your media organized in one place. SwiftTube focuses on simplicity and performance, avoiding unnecessary features and keeping the experience smooth.
+
+Whether you want to save music or videos, SwiftTube makes the process simple and efficient.
 
 # ⚡Getting Started
 
