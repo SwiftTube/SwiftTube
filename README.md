@@ -12,7 +12,7 @@
   <a href="https://github.com/nexmoe/VidBee/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/SwiftTube/SwiftTube?ogo=github&label=Contributors&labelColor=black&orange" />
   </a>
-    
+  
   <a href="https://github.com/SwiftTube/SwiftTube/releases">
     <img src="https://img.shields.io/badge/Latest_release-a0.1.0-black%26blue?logo=github&labelColor=black" alt="Latest release">
   </a>
@@ -28,7 +28,7 @@ SwiftTube is a lightweight and fast desktop application that lets you easily dow
 
 SwiftTube is currently under active development, and feedback is welcome. If you encounter any problems, please don't hesitate to open an issue.
 
-[📥 Download SwiftTube](github.com/SwiftTube/SwiftTube/releases)
+[📥 Download SwiftTube](https://github.com/SwiftTube/SwiftTube/releases)
 
 > [!IMPORTANT]
 > This program is in Alpha state. The code is old (5 years), from when I was learning to program. Many functions will be rewritten, the code will be optimized, and the UI framework will likely be changed.
