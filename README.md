@@ -47,7 +47,7 @@ SwiftTube is currently under active development, and feedback is welcome. If you
     Used to fetch, process, and display video thumbnails efficiently.
 
 # 🤝 Contributing
-You are welcome to contribute on this project, let's together. For more details, check out:
+You are welcome to contribute on this project, let's build together. For more details, check out:
 
 [Contributing Guide](CONTRIBUTING.md)
 
