@@ -1,8 +1,26 @@
-<p align="center"> <img width="25%" src=".github/assets/icon.webp"> </p>
+<p align="center">
+  <img src=".github/assets/icon.webp" width="96" alt="SwiftTube logo">
+</p>
 
-# SwiftTube: A minimalist YouTube downloader
+<h1 align="center">SwiftTube</h1>
 
-<p align="center"> <img width="100%" src=".github/assets/screenshot.webp"> </p>
+<p align="center">
+  <a href="https://github.com/SwiftTube/SwiftTube/stargazers">
+      <img src="https://img.shields.io/github/stars/SwiftTube/SwiftTube?color=ffcb47&labelColor=black&logo=github&label=Stars" />
+  </a>
+    
+  <a href="https://github.com/nexmoe/VidBee/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/SwiftTube/SwiftTube?ogo=github&label=Contributors&labelColor=black&orange" />
+  </a>
+    
+  <a href="https://github.com/SwiftTube/SwiftTube/releases">
+    <img src="https://img.shields.io/badge/Latest_release-a0.1.0-black%26blue?logo=github&labelColor=black" alt="Latest release">
+  </a>
+</p>
+
+<p align="center">
+  <img src=".github/assets/screenshot.webp" alt="SwiftTube screenshot">
+</p>
 
 SwiftTube is a lightweight and fast desktop application that lets you easily download YouTube videos. With a minimal interface, you can input links, or search videos. Also you can download those videos in MP3 and MP4 formats, and enjoy a smooth experience.
 
