@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/SwiftTube/SwiftTube/stargazers">
-      <img src="https://img.shields.io/github/stars/SwiftTube/SwiftTube?color=ffcb47&labelColor=black&logo=github&label=Stars" />
+      <img src="https://img.shields.io/github/stars/SwiftTube/SwiftTube" />
   </a>
     
   <a href="https://github.com/nexmoe/VidBee/graphs/contributors">
