@@ -4,7 +4,7 @@ __author__ = "TrollSkull"
 __version__ = "0.1.1"
 __license__ = "MIT License"
 
-LATEST_RELEASE = "https://api.github.com/repos/TrollSkull/SwiftTube/releases/latest"
+LATEST_RELEASE = "https://api.github.com/repos/SwiftTube/SwiftTube/releases/latest"
 
 def is_there_a_new_release() -> bool:
     response = requests.get(LATEST_RELEASE, timeout = 10)
