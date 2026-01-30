@@ -8,13 +8,17 @@
   <a href="https://github.com/SwiftTube/SwiftTube/stargazers">
       <img src="https://img.shields.io/github/stars/SwiftTube/SwiftTube" />
   </a>
-    
+
+  <a href="https://github.com/SwiftTube/SwiftTube/releases">
+    <img src="https://img.shields.io/github/downloads/SwiftTube/SwiftTube/total?color=369eff&labelColor=black&logo=github&label=Downloads" />
+  </a>
+  
   <a href="https://github.com/SwiftTube/SwiftTube/graphs/contributors">
       <img src="https://img.shields.io/github/contributors/SwiftTube/SwiftTube?ogo=github&label=Contributors&labelColor=black&orange" />
   </a>
-  
-  <a href="https://github.com/SwiftTube/SwiftTube/releases">
-    <img src="https://img.shields.io/badge/Latest_release-a0.1.0-black%26blue?logo=github&labelColor=black" alt="Latest release">
+
+  <a href="https://github.com/SwiftTube/SwiftTube/releases/latest">
+    <img src="https://img.shields.io/github/v/release/SwiftTube/SwiftTube?color=369eff&labelColor=black&logo=github&label=Latest%20Release" />
   </a>
 </p>
 
