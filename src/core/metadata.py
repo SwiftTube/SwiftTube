@@ -13,7 +13,7 @@ def is_there_a_new_release() -> bool:
     data = response.json()
     tag_name = data["tag_name"]
 
-    if tag_name != __version__:
+    if tag_name != f"a.{__version__}":
         return True
     
     return False
