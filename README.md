@@ -35,7 +35,7 @@ SwiftTube is currently under active development, and feedback is welcome. If you
 [📥 Download SwiftTube](https://github.com/SwiftTube/SwiftTube/releases)
 
 > [!IMPORTANT]
-> This program is in Alpha state. The code is old (5 years), from when I was learning to program. Many functions will be rewritten, the code will be optimized, and the UI framework will likely be changed.
+> This program is in Alpha state. The code is old (5 years), from when I was learning to code. Many functions will be rewritten, the code will be optimized, and the UI framework will likely be changed.
 
 ## 🚧 Built with this Tech Stack
 
