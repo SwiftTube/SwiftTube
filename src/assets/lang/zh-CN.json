@@ -40,6 +40,9 @@
     "error_cant_download": "无法下载该视频。",
     "success_download": "视频下载成功。",
     "copied_link": "链接已复制到剪贴板。",
-    "added_to_queue": "视频已加入队列。"
+    "added_to_queue": "视频已加入队列。",
+
+    "update_available_title": "SwiftTube 有新版本可用！",
+    "update_available_subtitle": "前往我们的 GitHub 下载该项目的最新版本。"
   }
 }

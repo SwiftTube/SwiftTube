@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from PIL import Image
 
-from gui.components.background_message import BackgroundMessage
+from gui.widgets.background_message import BackgroundMessage
 
 from core.language_manager import language_manager
 from core.utils import resource_path

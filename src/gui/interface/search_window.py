@@ -5,7 +5,7 @@ from tkinter import TclError
 import customtkinter as ctk
 from PIL import Image
 
-from gui.components.background_message import BackgroundMessage
+from gui.widgets.background_message import BackgroundMessage
 from gui.widgets.video_search import VideoSearchWidget
 from gui.components.tags import FilterComponent
 

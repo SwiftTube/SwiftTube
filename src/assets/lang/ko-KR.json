@@ -40,6 +40,9 @@
     "error_cant_download": "이 동영상을 다운로드할 수 없습니다.",
     "success_download": "동영상이 성공적으로 다운로드되었습니다.",
     "copied_link": "링크가 클립보드에 복사되었습니다.",
-    "added_to_queue": "동영상이 대기열에 추가되었습니다."
+    "added_to_queue": "동영상이 대기열에 추가되었습니다.",
+  
+    "update_available_title": "SwiftTube의 새 업데이트가 있습니다!",
+    "update_available_subtitle": "GitHub에서 이 프로젝트의 최신 릴리스를 다운로드하세요."
   }
 }

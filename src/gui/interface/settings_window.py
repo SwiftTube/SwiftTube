@@ -7,8 +7,11 @@ from gui.widgets.settings_option import (
     SettingSwitchOptionWidget
 )
 
+from gui.widgets.update_message import UpdateMessageWidget
+
 from core.settings_manager import get_setting_value, set_setting_value
 from core.language_manager import language_manager
+from core.metadata import is_there_a_new_release
 from core.utils import resource_path
 
 class SettingsInterface(ctk.CTkFrame):
@@ -18,8 +21,19 @@ class SettingsInterface(ctk.CTkFrame):
             master = parent,
             fg_color = ["#FAFAFA", "#1E2124"]
         )
-        
-        language_manager.subscribe(self.update_language)
+
+        self.language_manager = language_manager
+        self.language_manager.subscribe(self.update_language)
+
+        self.update_message_widget = UpdateMessageWidget(parent = self)
+
+        if is_there_a_new_release():
+            self.update_message_widget.pack(
+                side = "top",
+                fill = "x",
+                padx = 10,
+                pady = 5
+            )
 
         self.settings_scrollable_frame = ctk.CTkScrollableFrame(
             master = self,
@@ -53,35 +67,11 @@ class SettingsInterface(ctk.CTkFrame):
             size = (15, 15)
         )
 
-        # quality_icon = ctk.CTkImage(
-        #     light_image = Image.open(resource_path("assets/icons/material/quality_icon_light.png")),
-        #     dark_image = Image.open(resource_path("assets/icons/material/quality_icon_dark.png")),
-        #     size = (18, 18)
-        # )
-
-        # auto_download_icon = ctk.CTkImage(
-        #     light_image = Image.open(resource_path("assets/icons/material/auto_download_icon_light.png")),
-        #     dark_image = Image.open(resource_path("assets/icons/material/auto_download_icon_dark.png")),
-        #     size = (18, 18)
-        # )
-
-        # reload_download_icon = ctk.CTkImage(
-        #     light_image = Image.open(resource_path("assets/icons/material/reload_download_icon_light.png")),
-        #     dark_image = Image.open(resource_path("assets/icons/material/reload_download_icon_dark.png")),
-        #     size = (18, 18)
-        # )
-
         search_limit_icon = ctk.CTkImage(
             light_image = Image.open(resource_path("assets/icons/material/search_limit_icon_light.png")),
             dark_image = Image.open(resource_path("assets/icons/material/search_limit_icon_dark.png")),
             size = (18, 14)
         )
-
-        # oled_icon = ctk.CTkImage(
-        #     light_image = Image.open(resource_path("assets/icons/material/oled_icon_light.png")),
-        #     dark_image = Image.open(resource_path("assets/icons/material/oled_icon_dark.png")),
-        #     size = (18, 18)
-        # )
 
         path_icon = ctk.CTkImage(
             light_image = Image.open(resource_path("assets/icons/material/path_icon_light.png")),
@@ -100,7 +90,7 @@ class SettingsInterface(ctk.CTkFrame):
             master = self.general_settings_title_frame,
             text_color = ["#1E2124", "#FAFAFA"],
             fg_color = ["#FAFAFA", "#1E2124"],
-            text = language_manager.get_text("general_settings"),
+            text = self.language_manager.get_text("general_settings"),
 
             font = ctk.CTkFont(
                 family = "Mada",
@@ -113,17 +103,17 @@ class SettingsInterface(ctk.CTkFrame):
 
         def change_language_option_command():
             new_value = self.change_language_option.get_option_value()
-            language_manager.set_language(language_manager.language_map[new_value])
-            set_setting_value("general_settings", "language", value = language_manager.language_map[new_value])
+            self.language_manager.set_language(self.language_manager.language_map[new_value])
+            set_setting_value("general_settings", "language", value = self.language_manager.language_map[new_value])
 
         self.change_language_option = SettingSelectionOptionWidget(
             parent = self.settings_scrollable_frame,
-            description = language_manager.get_text("change_language_desc"),
-            options = list(language_manager.language_map.keys()),
+            description = self.language_manager.get_text("change_language_desc"),
+            options = list(self.language_manager.language_map.keys()),
             icon = search_icon,
-            name = language_manager.get_text("language"),
+            name = self.language_manager.get_text("language"),
             button_command = change_language_option_command,
-            default_value = language_manager.get_language_name(language_manager.current_language)
+            default_value = self.language_manager.get_language_name(self.language_manager.current_language)
         )
 
         self.change_language_option.pack(fill = "x", padx = 10, pady = 5)
@@ -139,7 +129,7 @@ class SettingsInterface(ctk.CTkFrame):
             master = self.appearance_settings_title_frame,
             text_color = ["#1E2124", "#FAFAFA"],
             fg_color = ["#FAFAFA", "#1E2124"],
-            text = language_manager.get_text("appearance_settings"),
+            text = self.language_manager.get_text("appearance_settings"),
 
             font = ctk.CTkFont(
                 family = "Mada",
@@ -164,8 +154,8 @@ class SettingsInterface(ctk.CTkFrame):
         self.dark_theme_option = SettingSwitchOptionWidget(
             parent = self.settings_scrollable_frame,
             icon = moon_icon,
-            name = language_manager.get_text("dark_theme"),
-            description = language_manager.get_text("dark_theme_desc"),
+            name = self.language_manager.get_text("dark_theme"),
+            description = self.language_manager.get_text("dark_theme_desc"),
             button_command = change_application_theme
         )
 
@@ -178,16 +168,6 @@ class SettingsInterface(ctk.CTkFrame):
 
         self.dark_theme_option.pack(fill = "x", padx = 10, pady = 5)
 
-        # oled_mode_option = SettingSwitchOptionWidget(
-        #     parent = settings_scrollable_frame,
-        #     icon = oled_icon,
-        #     name = "OLED mode",
-        #     description = "Makes the app dark theme pitch black",
-        #     button_command = None
-        # )
-
-        # oled_mode_option.pack(fill = "x", padx = 10, pady = 5)
-
         self.video_settings_title_frame = ctk.CTkFrame(
             master = self.settings_scrollable_frame,
             fg_color = ["#FAFAFA", "#1E2124"]
@@ -199,7 +179,7 @@ class SettingsInterface(ctk.CTkFrame):
             master = self.video_settings_title_frame,
             text_color = ["#1E2124", "#FAFAFA"],
             fg_color = ["#FAFAFA", "#1E2124"],
-            text = language_manager.get_text("download_settings"),
+            text = self.language_manager.get_text("download_settings"),
 
             font = ctk.CTkFont(
                 family = "Mada",
@@ -213,67 +193,12 @@ class SettingsInterface(ctk.CTkFrame):
         self.download_path_selection = SettingPathSelectionWidget(
            parent = self.settings_scrollable_frame,
            icon = path_icon,
-           name = language_manager.get_text("download_path"),
-           description = language_manager.get_text("download_path_desc"),
+           name = self.language_manager.get_text("download_path"),
+           description = self.language_manager.get_text("download_path_desc"),
            default_path = get_setting_value("download_settings", "download_path")
         )
 
         self.download_path_selection.pack(fill = "x", padx = 10, pady = 5)
-
-        # def download_quality_option_command():
-        #     new_value = download_quality_option.get_option_value()
-        #     set_setting_value("download_settings", "default_download_quality", value = new_value)
-
-        # download_quality_option = SettingSelectionOptionWidget(
-        #     parent = settings_scrollable_frame,
-        #     icon = quality_icon,
-        #     name = "Default download quality",
-        #     description = "Select the default quality when downloading",
-        #     button_command = download_quality_option_command,
-        #     options = ["Highest quality", "Lowest quality", "Audio only"]
-        # )
-
-        # download_quality_option.pack(fill = "x", padx = 10, pady = 5)
-
-        # download_quality_option.change_option_value(
-        #     value = get_setting_value("download_settings", "default_download_quality")
-        # )
-
-        # automatic_download_option = SettingSwitchOptionWidget(
-        #     parent = settings_scrollable_frame,
-        #     icon = auto_download_icon,
-        #     name = "Automatic download",
-        #     description = "Enable automatic download for added videos",
-        #     button_command = None
-        # )
-
-        # automatic_download_option.pack(fill = "x", padx = 10, pady = 5)
-
-        # def reload_download_option_command():
-        #     if get_setting_value("download_settings", "reload_download"):
-        #         new_value = False
-
-        #     else:
-        #         new_value = True
-
-        #     set_setting_value("download_settings", "reload_download", value = new_value)
-
-        # reload_download_option = SettingSwitchOptionWidget(
-        #     parent = settings_scrollable_frame,
-        #     icon = reload_download_icon,
-        #     name = "Reload download",
-        #     description = "Reload download when videos fail downloading",
-        #     button_command = reload_download_option_command
-        # )
-
-        # reload_download_option.toggle_switch(
-        #     state = get_setting_value(
-        #         category = "download_settings",
-        #         setting = "reload_download"
-        #     )
-        # )
-
-        # reload_download_option.pack(fill = "x", padx = 10, pady = 5)
 
         self.search_settings_title_frame = ctk.CTkFrame(
             master = self.settings_scrollable_frame,
@@ -286,7 +211,7 @@ class SettingsInterface(ctk.CTkFrame):
             master = self.search_settings_title_frame,
             text_color = ["#1E2124", "#FAFAFA"],
             fg_color = ["#FAFAFA", "#1E2124"],
-            text = language_manager.get_text("search_settings"),
+            text = self.language_manager.get_text("search_settings"),
 
             font = ctk.CTkFont(
                 family = "Mada",
@@ -304,8 +229,8 @@ class SettingsInterface(ctk.CTkFrame):
         self.search_limit_option = SettingSelectionOptionWidget(
             parent = self.settings_scrollable_frame,
             icon = search_limit_icon,
-            name = language_manager.get_text("search_limit"),
-            description = language_manager.get_text("search_limit_desc"),
+            name = self.language_manager.get_text("search_limit"),
+            description = self.language_manager.get_text("search_limit_desc"),
             button_command = search_limit_option_command,
             options = [str(i) for i in range(10, 0, -1)]
         )
@@ -328,8 +253,8 @@ class SettingsInterface(ctk.CTkFrame):
         self.load_video_thumbnail_option = SettingSwitchOptionWidget(
             parent = self.settings_scrollable_frame,
             icon = film_icon,
-            name = language_manager.get_text("load_thumbnail"),
-            description = language_manager.get_text("load_thumbnail_desc"),
+            name = self.language_manager.get_text("load_thumbnail"),
+            description = self.language_manager.get_text("load_thumbnail_desc"),
             button_command = load_video_thumbnail_option_command
         )
 
@@ -343,33 +268,27 @@ class SettingsInterface(ctk.CTkFrame):
         self.load_video_thumbnail_option.pack(fill = "x", padx = 10, pady = 5)
     
     def update_language(self):
-        self.appearance_title_label.configure(text = language_manager.get_text("appearance_settings"))
-        self.settings_title_label.configure(text = language_manager.get_text("general_settings"))
-        self.video_title_label.configure(text = language_manager.get_text("download_settings"))
-        self.search_title_label.configure(text = language_manager.get_text("search_settings"))
+        self.appearance_title_label.configure(text = self.language_manager.get_text("appearance_settings"))
+        self.settings_title_label.configure(text = self.language_manager.get_text("general_settings"))
+        self.video_title_label.configure(text = self.language_manager.get_text("download_settings"))
+        self.search_title_label.configure(text = self.language_manager.get_text("search_settings"))
 
         self.change_language_option.configure(
-            title = language_manager.get_text("language"),
-            description = language_manager.get_text("change_language_desc")
+            title = self.language_manager.get_text("language"),
+            description = self.language_manager.get_text("change_language_desc")
         )
 
         self.dark_theme_option.configure(
-            title = language_manager.get_text("dark_theme"),
-            description = language_manager.get_text("dark_theme_desc")
+            title = self.language_manager.get_text("dark_theme"),
+            description = self.language_manager.get_text("dark_theme_desc")
         )
 
         self.download_path_selection.configure(
-            title = language_manager.get_text("download_path"),
-            description = language_manager.get_text("download_path_desc")
+            title = self.language_manager.get_text("download_path"),
+            description = self.language_manager.get_text("download_path_desc")
         )
 
         self.search_limit_option.configure(
-            title = language_manager.get_text("search_limit"),
-            description = language_manager.get_text("search_limit_desc")
+            title = self.language_manager.get_text("search_limit"),
+            description = self.language_manager.get_text("search_limit_desc")
         )
-
-        self.load_video_thumbnail_option.configure(
-            title = language_manager.get_text("load_thumbnail"),
-            description = language_manager.get_text("load_thumbnail_desc")
-        )
-        

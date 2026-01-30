@@ -40,6 +40,9 @@
     "error_cant_download": "Не удалось загрузить это видео.",
     "success_download": "Видео успешно загружено.",
     "copied_link": "Ссылка скопирована в буфер обмена.",
-    "added_to_queue": "Видео добавлено в очередь."
+    "added_to_queue": "Видео добавлено в очередь.",
+
+    "update_available_title": "Доступно новое обновление SwiftTube!",
+    "update_available_subtitle": "Посетите наш GitHub, чтобы загрузить последнюю версию проекта."
   }
 }
