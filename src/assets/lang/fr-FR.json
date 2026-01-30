@@ -40,6 +40,9 @@
     "error_cant_download": "Impossible de télécharger cette vidéo.",
     "success_download": "Vidéo téléchargée avec succès.",
     "copied_link": "Lien copié dans le presse-papiers.",
-    "added_to_queue": "Vidéo ajoutée à la file d'attente."
+    "added_to_queue": "Vidéo ajoutée à la file d'attente.",
+
+    "update_available_title": "Une nouvelle mise à jour de SwiftTube est disponible !",
+    "update_available_subtitle": "Consultez notre GitHub pour télécharger la dernière version du projet."
   }
 }

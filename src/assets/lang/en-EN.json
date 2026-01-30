@@ -40,6 +40,10 @@
         "error_cant_download": "Can't download this video.",
         "success_download": "Video downloaded successfully.",
         "copied_link": "Copied link to clipboard.",
-        "added_to_queue": "Added video to queue."
+        "added_to_queue": "Added video to queue.",
+
+        "update_available_title": "New SwiftTube update is available!",
+        "update_available_subtitle": "Check our GitHub to download the latest release of this project."
+
     }
 }
