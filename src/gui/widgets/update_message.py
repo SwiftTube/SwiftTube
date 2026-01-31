@@ -1,12 +1,11 @@
 import customtkinter as ctk
-from PIL import Image
 
 from core.language_manager import language_manager
-from core.utils import resource_path
+from core.resource_manager import UIResources
 
-update_icon = ctk.CTkImage(
-    light_image = Image.open(resource_path("assets/icons/material/update_icon.png")),
-    dark_image = Image.open(resource_path("assets/icons/material/update_icon.png")),
+update_icon = UIResources.get_icon(
+    light_path = "assets/icons/material/update_icon.png",
+    dark_path = "assets/icons/material/update_icon.png",
     size = (30, 30)
 )
 

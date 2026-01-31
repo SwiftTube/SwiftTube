@@ -1,10 +1,27 @@
 import threading
 
 import customtkinter as ctk
-from PIL import Image
 
-from core.utils import resource_path
+from core.resource_manager import UIResources
 from .toast_notification import ClipboardCopiedWidget
+
+x_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/x_icon.png",
+    dark_path = "assets/icons/feather/x_icon.png",
+    size = (10, 10)
+)
+
+mini_tags_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/tag_icon.png",
+    dark_path = "assets/icons/feather/tag_icon.png",
+    size = (12, 12)
+)
+
+tags_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/tag_icon.png",
+    dark_path = "assets/icons/feather/tag_icon.png",
+    size = (18, 18)
+)
 
 class FilterComponent(ctk.CTkFrame):
 
@@ -22,23 +39,6 @@ class FilterComponent(ctk.CTkFrame):
         widgets_in_component: list = []
         widgets_in_component.append(self)
 
-        x_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/x_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/x_icon.png")),
-            size = (10, 10)
-        )
-
-        mini_tags_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/tag_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/tag_icon.png")),
-            size = (12, 12)
-        )
-
-        tags_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/tag_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/tag_icon.png")),
-            size = (18, 18)
-        )
 
         def add_tags():
             error_notification = ClipboardCopiedWidget(

@@ -2,10 +2,39 @@ from webbrowser import open as openurl
 
 from CTkToolTip import CTkToolTip
 import customtkinter as ctk
-from PIL import Image
 
 from core.language_manager import language_manager
-from core.utils import resource_path
+from core.resource_manager import UIResources
+
+explore_icon = UIResources.get_icon(
+    light_path = "assets/icons/material/explore_icon_dark.png",
+    dark_path = "assets/icons/material/explore_icon_dark.png",
+    size = (20, 20)
+)
+
+download_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/download_icon.png",
+    dark_path = "assets/icons/feather/download_icon.png",
+    size = (18, 18)
+)
+
+github_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/github_icon.png",
+    dark_path = "assets/icons/feather/github_icon.png",
+    size = (16, 18)
+)
+
+settings_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/settings_icon.png",
+    dark_path = "assets/icons/feather/settings_icon.png",
+    size = (18, 18)
+)
+
+red_dot_icon = UIResources.get_icon(
+    light_path = "assets/icons/red_dot.png",
+    dark_path = "assets/icons/red_dot.png",
+    size = (4, 4)
+)
 
 class SideBarWidget(ctk.CTkFrame):
 
@@ -24,35 +53,6 @@ class SideBarWidget(ctk.CTkFrame):
         self.notification_already_active = False
         self.interfaces = interfaces
 
-        explore_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/explore_icon_dark.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/explore_icon_dark.png")),
-            size = (20, 20)
-        )
-
-        download_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/download_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/download_icon.png")),
-            size = (18, 18)
-        )
-
-        github_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/github_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/github_icon.png")),
-            size = (16, 18)
-        )
-
-        settings_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/settings_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/settings_icon.png")),
-            size = (18, 18)
-        )
-
-        red_dot_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/red_dot.png")),
-            dark_image = Image.open(resource_path("assets/icons/red_dot.png")),
-            size = (4, 4)
-        )
 
         search_button = ctk.CTkButton(
             master = self,

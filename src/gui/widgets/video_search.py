@@ -15,7 +15,34 @@ from core.image_manager import create_image_with_rounded_corners
 from core.youtube_manager import fetch_video_information
 from core.settings_manager import get_setting_value
 from core.language_manager import language_manager
+from core.resource_manager import UIResources
 from core.utils import resource_path
+
+link_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/link_icon.png",
+    dark_path = "assets/icons/feather/link_icon.png",
+    size = (12, 6)
+)
+
+copy_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/copy_icon.png",
+    dark_path = "assets/icons/feather/copy_icon.png",
+    size = (10, 10)
+)
+
+plus_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/plus_icon.png",
+    dark_path = "assets/icons/feather/plus_icon.png",
+    size = (8, 8)
+)
+
+views_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/views_icon.png",
+    dark_path = "assets/icons/feather/views_icon.png",
+    size = (10, 10)
+)
+
+thumbnail = resource_path("assets/cant_load_thumbnail.png")
 
 class VideoSearchWidget(ctk.CTkFrame):
 
@@ -30,7 +57,6 @@ class VideoSearchWidget(ctk.CTkFrame):
         )
 
         response = requests.get(image_url, timeout = 10)
-        thumbnail = "assets/cant_load_thumbnail.png"
 
         if get_setting_value(
             category = "search_settings",
@@ -48,11 +74,11 @@ class VideoSearchWidget(ctk.CTkFrame):
                         if bbox:
                             image = image.crop(bbox)
                 
+                    thumbnail = create_image_with_rounded_corners(image, 30)
+
                 except UnidentifiedImageError:
                     # print("Could not identify image format. Using default thumbnail.")
-                    image = Image.open(resource_path("assets/cant_load_thumbnail.png"))
-
-                thumbnail = create_image_with_rounded_corners(image, 30)
+                    pass
 
         if get_setting_value(
             category = "search_settings",
@@ -64,29 +90,6 @@ class VideoSearchWidget(ctk.CTkFrame):
                 size = (129, 71)
             )
 
-        link_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/link_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/link_icon.png")),
-            size = (12, 6)
-        )
-
-        copy_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/copy_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/copy_icon.png")),
-            size = (10, 10)
-        )
-
-        plus_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/plus_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/plus_icon.png")),
-            size = (8, 8)
-        )
-
-        views_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/views_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/views_icon.png")),
-            size = (10, 10)
-        )
 
         if get_setting_value(
             category = "search_settings",
@@ -296,12 +299,3 @@ class VideoSearchWidget(ctk.CTkFrame):
         self.add_to_downloads_button.configure(
             text = language_manager.get_text("add_to_downloads")
         )
-
-        # self.snackbar.configure(
-        #     message = language_manager.get_text("copied_link")
-        # )
-
-        # self.queue_snackbar.configure(
-        #     message = language_manager.get_text("added_to_queue")
-        # )
-

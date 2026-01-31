@@ -6,6 +6,12 @@ from gui.widgets.background_message import BackgroundMessage
 from core.language_manager import language_manager
 from core.utils import resource_path
 
+start_download_image = ctk.CTkImage(
+    light_image = Image.open(resource_path("assets/start_downloading_background.png")),
+    dark_image = Image.open(resource_path("assets/start_downloading_background.png")),
+    size = (219, 190)
+)
+
 class DownloadsInterface(ctk.CTkFrame):
 
     def __init__(self, parent):
@@ -15,12 +21,6 @@ class DownloadsInterface(ctk.CTkFrame):
         )
 
         language_manager.subscribe(self.update_language)
-
-        start_download_image = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/start_downloading_background.png")),
-            dark_image = Image.open(resource_path("assets/start_downloading_background.png")),
-            size = (219, 190)
-        )
 
         self.queue_frame = ctk.CTkScrollableFrame(
             master = self,

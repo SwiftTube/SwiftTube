@@ -12,7 +12,38 @@ from gui.widgets.update_message import UpdateMessageWidget
 from core.settings_manager import get_setting_value, set_setting_value
 from core.language_manager import language_manager
 from core.metadata import is_there_a_new_release
+from core.resource_manager import UIResources
 from core.utils import resource_path
+
+moon_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/moon_icon_light.png",
+    dark_path = "assets/icons/feather/moon_icon_dark.png",
+    size = (15, 15)
+)
+
+film_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/film_icon_light.png",
+    dark_path = "assets/icons/feather/film_icon_dark.png",
+    size = (15, 15)
+)
+
+search_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/globe_icon_light.png",
+    dark_path = "assets/icons/feather/globe_icon_dark.png",
+    size = (15, 15)
+)
+
+search_limit_icon = UIResources.get_icon(
+    light_path = "assets/icons/material/search_limit_icon_light.png",
+    dark_path = "assets/icons/material/search_limit_icon_dark.png",
+    size = (18, 14)
+)
+
+path_icon = UIResources.get_icon(
+    light_path = "assets/icons/material/path_icon_light.png",
+    dark_path = "assets/icons/material/path_icon_dark.png",
+    size = (18, 18)
+)
 
 class SettingsInterface(ctk.CTkFrame):
 
@@ -47,36 +78,6 @@ class SettingsInterface(ctk.CTkFrame):
             fill = "both",
             expand = True,
             padx = 10
-        )
-
-        moon_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/moon_icon_light.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/moon_icon_dark.png")),
-            size = (15, 15)
-        )
-
-        film_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/film_icon_light.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/film_icon_dark.png")),
-            size = (15, 15)
-        )
-
-        search_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/globe_icon_light.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/globe_icon_dark.png")),
-            size = (15, 15)
-        )
-
-        search_limit_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/search_limit_icon_light.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/search_limit_icon_dark.png")),
-            size = (18, 14)
-        )
-
-        path_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/path_icon_light.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/path_icon_dark.png")),
-            size = (18, 18)
         )
 
         self.general_settings_title_frame = ctk.CTkFrame(

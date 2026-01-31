@@ -1,10 +1,33 @@
 import customtkinter as ctk
 from typing import Literal
-from PIL import Image
 
-from core.utils import resource_path
+from core.resource_manager import UIResources
 
 types = Literal["error", "information", "warning", "success"]
+
+information_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/information_icon.png",
+    dark_path = "assets/icons/feather/information_icon.png",
+    size = (15, 15)
+)
+
+error_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/error_icon.png",
+    dark_path = "assets/icons/feather/error_icon.png",
+    size = (15, 15)
+)
+
+warning_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/warning_icon.png",
+    dark_path = "assets/icons/feather/warning_icon.png",
+    size = (15, 15)
+)
+
+check_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/check_icon.png",
+    dark_path = "assets/icons/feather/check_icon.png",
+    size = (12, 10)
+)
 
 class ClipboardCopiedWidget(ctk.CTkFrame):
 
@@ -17,29 +40,6 @@ class ClipboardCopiedWidget(ctk.CTkFrame):
             width = 400
         )
 
-        information_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/information_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/information_icon.png")),
-            size = (15, 15)
-        )
-
-        error_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/error_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/error_icon.png")),
-            size = (15, 15)
-        )
-
-        warning_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/warning_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/warning_icon.png")),
-            size = (15, 15)
-        )
-
-        check_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/check_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/check_icon.png")),
-            size = (12, 10)
-        )
 
         if notification_type == "error":
             notification_color = "#F45759"
