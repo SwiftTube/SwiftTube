@@ -1,5 +1,4 @@
 import threading
-import gc
 
 from tkinter import TclError
 import customtkinter as ctk
@@ -13,6 +12,31 @@ from core.youtube_manager import fetch_video_information, search_video_on_yt
 from core.utils import format_visits, resource_path
 from core.settings_manager import get_setting_value
 from core.language_manager import language_manager
+from core.resource_manager import UIResources
+
+search_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/search_icon.png",
+    dark_path = "assets/icons/feather/search_icon.png",
+    size = (16, 16)
+)
+
+clear_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/x_icon_white.png",
+    dark_path = "assets/icons/feather/x_icon_white.png",
+    size = (10, 10)
+)
+
+couldnt_find_result_image = ctk.CTkImage(
+    light_image = Image.open(resource_path("assets/couldnt_find_result_background.png")),
+    dark_image = Image.open(resource_path("assets/couldnt_find_result_background.png")),
+    size = (265, 197)
+)
+
+start_searching_image = ctk.CTkImage(
+    light_image = Image.open(resource_path("assets/start_searching_background.png")),
+    dark_image = Image.open(resource_path("assets/start_searching_background.png")),
+    size = (250, 227)
+)
 
 class SearchInterface(ctk.CTkFrame):
 
@@ -23,30 +47,6 @@ class SearchInterface(ctk.CTkFrame):
         )
 
         language_manager.subscribe(self.update_language)
-
-        search_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/search_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/search_icon.png")),
-            size = (16, 16)
-        )
-
-        clear_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/x_icon_white.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/x_icon_white.png")),
-            size = (10, 10)
-        )
-
-        couldnt_find_result_image = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/couldnt_find_result_background.png")),
-            dark_image = Image.open(resource_path("assets/couldnt_find_result_background.png")),
-            size = (265, 197)
-        )
-
-        start_searching_image = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/start_searching_background.png")),
-            dark_image = Image.open(resource_path("assets/start_searching_background.png")),
-            size = (250, 227)
-        )
 
         search_frame = ctk.CTkFrame(
             master = self,
@@ -163,59 +163,6 @@ class SearchInterface(ctk.CTkFrame):
 
         self.couldnt_find_result = False
 
-        def create_background_message(title: str, description: str, image: ctk.CTkImage):
-            background_message_frame = ctk.CTkFrame(
-                master = self,
-                fg_color = ["#FAFAFA", "#1E2124"]
-            )
-
-            background_message_image = ctk.CTkLabel(
-                master = background_message_frame,
-                image = image,
-                text = ""
-            )
-
-            background_message_image.pack(side = "left", padx = 40)
-
-            background_message_text_frame = ctk.CTkFrame(
-                master = background_message_frame,
-                fg_color = ["#FAFAFA", "#1E2124"]
-            )
-
-            background_message_text_frame.pack(side = "left")
-
-            background_message_title = ctk.CTkLabel(
-                master = background_message_text_frame,
-                text = title,
-                text_color = "#5796F4",
-                justify = "left",
-
-                font = ctk.CTkFont(
-                    family = "Mada",
-                    weight = "bold",
-                    size = 23
-                )
-            )
-
-            background_message_title.pack(side = "top")
-
-            background_message_description = ctk.CTkLabel(
-                master = background_message_text_frame,
-                text_color = "#9BA4AF",
-                text = description,
-                justify = "left",
-
-                font = ctk.CTkFont(
-                    family = "Mada",
-                    weight = "normal",
-                    size = 15
-                )
-            )
-
-            background_message_description.pack(side = "top")
-
-            return background_message_frame
-
         self.couldnt_find_result_frame = BackgroundMessage(
             master = self,
             title = language_manager.get_text("search_empty_title"),
@@ -290,9 +237,6 @@ class SearchInterface(ctk.CTkFrame):
                     # print(fast_draw_error)
                     pass
 
-                finally:
-                    gc.collect()
-
             self.videos_in_videosframe = []
 
             if not query.startswith("https://"):
@@ -330,7 +274,6 @@ class SearchInterface(ctk.CTkFrame):
 
                 finally:
                     search_results = None
-                    gc.collect()
 
             else:
                 create_video_component(query)

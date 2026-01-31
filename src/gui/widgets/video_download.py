@@ -4,7 +4,6 @@ import tempfile
 import shutil
 import time
 import os
-import gc
 
 from PIL import Image, ImageOps, UnidentifiedImageError
 from pytubefix import YouTube, request, exceptions
@@ -17,6 +16,57 @@ from core.utils import format_bytes, sanitize_filename, resource_path
 from core.image_manager import create_image_with_rounded_corners
 from core.settings_manager import get_setting_value
 from core.language_manager import language_manager
+from core.resource_manager import UIResources
+
+filesize_icon_blue = UIResources.get_icon(
+    light_path = "assets/icons/material/filesize_icon_blue.png",
+    dark_path = "assets/icons/material/filesize_icon_blue.png",
+    size = (10, 9)
+)
+
+filesize_icon_orange = UIResources.get_icon(
+    light_path = "assets/icons/material/filesize_icon_orange.png",
+    dark_path = "assets/icons/material/filesize_icon_orange.png",
+    size = (10, 9)
+)
+
+download_speed_icon_blue = UIResources.get_icon(
+    light_path = "assets/icons/material/download_speed_icon_blue.png",
+    dark_path = "assets/icons/material/download_speed_icon_blue.png",
+    size = (10, 9)
+)
+
+download_speed_icon_orange = UIResources.get_icon(
+    light_path = "assets/icons/material/download_speed_icon_orange.png",
+    dark_path = "assets/icons/material/download_speed_icon_orange.png",
+    size = (10, 9)
+)
+
+download_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/download_icon.png",
+    dark_path = "assets/icons/feather/download_icon.png",
+    size = (10, 11)
+)
+
+pause_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/pause_icon.png",
+    dark_path = "assets/icons/feather/pause_icon.png",
+    size = (7, 8)
+)
+
+resume_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/resume_icon.png",
+    dark_path = "assets/icons/feather/resume_icon.png",
+    size = (7, 9)
+)
+
+views_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/views_icon.png",
+    dark_path = "assets/icons/feather/views_icon.png",
+    size = (10, 10)
+)
+
+thumbnail = resource_path("assets/cant_load_thumbnail.png")
 
 class VideoDownloadWidget(ctk.CTkFrame):
 
@@ -31,11 +81,9 @@ class VideoDownloadWidget(ctk.CTkFrame):
         )
 
         self.filesizes = filesizes
+        self.stop_download = False
 
         response = requests.get(image_url, timeout = 10)
-        thumbnail = resource_path("assets/cant_load_thumbnail.png")
-
-        self.stop_download = False
 
         if response.status_code == 200:
             try:
@@ -50,7 +98,7 @@ class VideoDownloadWidget(ctk.CTkFrame):
                         image = image.crop(bbox)
 
             except (FileNotFoundError, UnidentifiedImageError):
-                image = Image.open(resource_path("assets/cant_load_thumbnail.png"))
+                pass
                 
             thumbnail = create_image_with_rounded_corners(image, 30)
 
@@ -75,53 +123,6 @@ class VideoDownloadWidget(ctk.CTkFrame):
             size = (129, 71)
         )
 
-        filesize_icon_blue = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/filesize_icon_blue.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/filesize_icon_blue.png")),
-            size = (10, 9)
-        )
-
-        filesize_icon_orange = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/filesize_icon_orange.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/filesize_icon_orange.png")),
-            size = (10, 9)
-        )
-
-        download_speed_icon_blue = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/download_speed_icon_blue.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/download_speed_icon_blue.png")),
-            size = (10, 9)
-        )
-
-        download_speed_icon_orange = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/material/download_speed_icon_orange.png")),
-            dark_image = Image.open(resource_path("assets/icons/material/download_speed_icon_orange.png")),
-            size = (10, 9)
-        )
-
-        download_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/download_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/download_icon.png")),
-            size = (10, 11)
-        )
-
-        pause_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/pause_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/pause_icon.png")),
-            size = (7, 8)
-        )
-
-        resume_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/resume_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/resume_icon.png")),
-            size = (7, 9)
-        )
-
-        views_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/views_icon.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/views_icon.png")),
-            size = (10, 10)
-        )
 
         video_thumbnail = ctk.CTkLabel(
             master = self,
@@ -388,9 +389,6 @@ class VideoDownloadWidget(ctk.CTkFrame):
 
             except TclError as _:
                 pass
-
-            finally:
-                gc.collect()
 
         def pause_download():
             self.stop_download = True

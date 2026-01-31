@@ -1,7 +1,7 @@
 import requests
 
 __author__ = "TrollSkull"
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __license__ = "MIT License"
 
 LATEST_RELEASE = "https://api.github.com/repos/SwiftTube/SwiftTube/releases/latest"
@@ -13,7 +13,7 @@ def is_there_a_new_release() -> bool:
     data = response.json()
     tag_name = data["tag_name"]
 
-    if tag_name != f"a.{__version__}":
+    if tag_name != f"a{__version__}":
         return True
     
     return False

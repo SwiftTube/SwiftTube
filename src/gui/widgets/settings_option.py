@@ -1,9 +1,14 @@
 from customtkinter import filedialog
 import customtkinter as ctk
-from PIL import Image
 
 from core.settings_manager import set_setting_value
-from core.utils import resource_path
+from core.resource_manager import UIResources
+
+folder_path_icon = UIResources.get_icon(
+    light_path = "assets/icons/feather/folder_icon_light.png",
+    dark_path = "assets/icons/feather/folder_icon_dark.png",
+    size = (18, 16)
+)
 
 class SettingSwitchOptionWidget(ctk.CTkFrame):
 
@@ -174,9 +179,6 @@ class SettingSelectionOptionWidget(ctk.CTkFrame):
 
         border_color_for_option_menu.pack(side = "right", padx = 14)
 
-        # WHY DOES OPTION MENU DONT HAVE "BORDER_COLOR" AND "BORDER_WIDTH"
-        # WHYYYYYYYYYYYYYYYYYY
-
         self.option_menu = ctk.CTkOptionMenu(
             master = border_color_for_option_menu,
             dropdown_hover_color = ["#D9D9D9", "#282B30"],
@@ -229,11 +231,6 @@ class SettingPathSelectionWidget(ctk.CTkFrame):
             height = 62
         )
 
-        folder_path_icon = ctk.CTkImage(
-            light_image = Image.open(resource_path("assets/icons/feather/folder_icon_light.png")),
-            dark_image = Image.open(resource_path("assets/icons/feather/folder_icon_dark.png")),
-            size = (18, 16)
-        )
 
         option_icon = ctk.CTkLabel(
             master = self,
