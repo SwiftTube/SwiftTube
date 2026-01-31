@@ -34,9 +34,9 @@ Whether you want to save music or videos, SwiftTube makes the process simple and
 
 # ⚡Getting Started
 
-SwiftTube is currently under active development, and feedback is welcome. If you encounter any problems, please don't hesitate to open an issue.
+SwiftTube is currently under active development, and feedback is welcome. If you encounter any problems, please don't hesitate to open an issue. You can download SwiftTube in the [GitHub releases](https://github.com/SwiftTube/SwiftTube/releases) or download the project in SourceForge.
 
-[📥 Download SwiftTube](https://github.com/SwiftTube/SwiftTube/releases)
+[![Download PyTube Downloader](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/swift-tube/files/latest/download)
 
 > [!IMPORTANT]
 > This program is in Alpha state. The code is old (5 years), from when I was learning to code. Many functions will be rewritten, the code will be optimized, and the UI framework will likely be changed.
