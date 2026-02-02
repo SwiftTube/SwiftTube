@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/assets/icon.webp" width="96" alt="SwiftTube logo">
+  <img src=".github/README/assets/icon.webp" width="96" alt="SwiftTube logo">
 </p>
 
 <h1 align="center">SwiftTube</h1>
@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-  <img src=".github/assets/screenshot.webp" alt="SwiftTube screenshot">
+  <img src=".github/README/assets/screenshot.webp" alt="SwiftTube screenshot">
 </p>
 
 > [!NOTE]
@@ -34,6 +34,24 @@ SwiftTube is a lightweight and fast desktop application designed to download You
 The application allows you to download videos quickly and keep your media organized in one place. SwiftTube focuses on simplicity and performance, avoiding unnecessary features and keeping the experience smooth.
 
 Whether you want to save music or videos, SwiftTube makes the process simple and efficient.
+
+<details>
+  <summary><h3>🌍 Available Languages</h1></summary>
+  <br>
+
+  - 🇺🇸 [English](README.md)
+  - 🇪🇸 [Español](.github/README/README.es-ES.md)
+  - 🇫🇷 [Français](.github/README/README.fr-FR.md)
+  - 🇩🇪 [Deutsch](.github/README/README.de-DE.md)
+  - 🇮🇹 [Italiano](.github/README/README.it-IT.md)
+  - 🇵🇹 [Português](.github/README/README.pt-PT.md)
+  - 🇧🇷 [Português (Brasil)](.github/README/README.pt-BR.md)
+  - 🇷🇺 [Русский](.github/README/README.ru-RU.md)
+  - 🇨🇳 [中文（简体）](.github/README/README.zh-CN.md)
+  - 🇯🇵 [日本語](.github/README/README.ja-JP.md)
+  - 🇰🇷 [한국어](.github/README/README.ko-KR.md)
+
+</details>
 
 ## 🚀 Features
 
