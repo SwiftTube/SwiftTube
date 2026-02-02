@@ -26,11 +26,24 @@
   <img src=".github/assets/screenshot.webp" alt="SwiftTube screenshot">
 </p>
 
+> [!NOTE]
+> ⭐ If you find SwiftTube useful, consider giving the repository a star — it really helps!
+
 SwiftTube is a lightweight and fast desktop application designed to download YouTube videos in MP3 and MP4 formats. It provides a clean and minimal interface that is easy to understand and use.
 
 The application allows you to download videos quickly and keep your media organized in one place. SwiftTube focuses on simplicity and performance, avoiding unnecessary features and keeping the experience smooth.
 
 Whether you want to save music or videos, SwiftTube makes the process simple and efficient.
+
+## 🚀 Features
+
+- 🎥 Download YouTube videos & 🎧 extract MP3 audio  
+- ⚙️ Select video/audio quality and format
+- 📥 Multiple downloads with queue support  
+- ⏸️ Pause & resume downloads  
+- 🖥️ Modern, lightweight & minimal UI  
+- 🌍 Available in 10 languages  
+- 💻 Cross-platform (Windows & Linux)
 
 # ⚡Getting Started
 
