@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/README/assets/icon.webp" width="96" alt="SwiftTube 로고">
+  <img src="assets/icon.webp" width="96" alt="SwiftTube 로고">
 </p>
 
 <h1 align="center">SwiftTube</h1>
@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-  <img src=".github/README/assets/screenshot.webp" alt="SwiftTube 스크린샷">
+  <img src="assets/screenshot.webp" alt="SwiftTube 스크린샷">
 </p>
 
 > [!NOTE]
